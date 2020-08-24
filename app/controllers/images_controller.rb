@@ -14,6 +14,9 @@ class ImagesController < ApplicationController
 		@image = Image.new image_params
 		if @image.save
 			redirect_to @image, notice: 'Image was successfully saved.' 
+			# render :show
+		else
+			raise @image.errors
 		end
 
 		# redirect_to @image
@@ -30,7 +33,7 @@ class ImagesController < ApplicationController
 	def update
 		# @image = Image.find params[:id]
 		if @image.update(image_params)
-			redirect_to @image, notice: 'Image was successfully Updated.' 
+			redirect_to images_path, notice: 'Image was successfully Updated.' 
 		end	
 	end
 
