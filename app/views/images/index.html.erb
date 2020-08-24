@@ -1,0 +1,20 @@
+
+<div class="container">
+	<p id="notice"><%= notice %></p>
+
+		<h1>Images List</h1>
+
+		<div>
+			<%= link_to 'New Image', new_image_path %>
+		</div>
+	<div class="row">
+		<%= render @images %>
+	</div>
+</div>
+
+<!--  
+<%- @images.each do |image| %>
+	<%= image.description %>
+	<br>
+<% end %>
+-->

@@ -1,0 +1,15 @@
+<!-- Parcial de index -->
+
+<div class="col">
+	<figure class="figure">
+		<!-- <img src="https://www.rajshriplastiwood.com/uploads/product/picture.jpg" class="figure-img img-fluid rounded"> -->
+		<%= image_tag image.picture.medium.url, class: 'figure-img img-fluid rounded' %>
+		<figcaption>
+			<%= image.description %>
+			<%= link_to 'Show', image %>
+			<%= link_to 'Edit', edit_image_path(image) %>
+			<%= link_to 'Delete', image, method: :delete, data: {confirm: 'Are you sure?'} %>
+			<!-- <br> -->
+		</figcaption>
+	</figure>
+</div>

@@ -1,0 +1,27 @@
+<!-- Parcial para new y edit -->
+
+<div class="form-group">
+	<%= form_for @image do |f| %>
+
+		<div class="field">
+			<%= f.label :picture %>
+		</div>
+
+		<div class="field">	
+			<%= f.file_field :picture %>
+		</div>
+
+		<br>
+		<div class="field">
+			<%= f.label :description %>
+		</div>
+
+		<div class="field">	
+			<%= f.text_field :description %>
+		</div>
+		<br>
+		<div class="actions">
+			<%= f.submit 'Enviar', :class => 'btn btn-primary' %>
+		</div>
+	<% end %>
+</div>
